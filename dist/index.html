@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="format-detection" content="email=no,address=no,telephone=no"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body class="page-index" data-page="index">
+<div class="header-title">
+    <em class="back"></em>
+    <h2>首页</h2>
+</div>
+<main>
+    <div class="banner swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/ABUIABACGAAgy563ygUogOe4vAMwgAU4rAI!640x640.jpg"></div>
+            <div class="swiper-slide"><img src="images/ABUIABAEGAAg-9nBygUo8oL4_wMwoAs42wU!640x640.png"></div>
+            <div class="swiper-slide"><img src="images/ABUIABAEGAAgu9nBygUo8MKvFzCgCzixBQ!640x640.png"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    
+</main>
+
+<!-- js start -->
+<script src="js/zepto.min.js"></script>
+<script src="js/autoFize.js"></script>
+<script src="js/swiper-3.3.1.jquery.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+
+        // 如果需要分页器
+        pagination: '.swiper-pagination'
+    })
+</script>
+<!-- js end -->
+</body>
+</html>

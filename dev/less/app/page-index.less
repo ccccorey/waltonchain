@@ -1,0 +1,86 @@
+.page-index {
+  position: relative;
+  padding: 140px 0;
+  box-sizing: border-box;
+  background-color: #efefef;
+  div{
+    box-sizing: border-box;
+  }
+  .header-bar {
+    position: fixed;
+    top: 0;
+    background-color: #f83f54;
+    z-index: 100;
+    width: 100%;
+    max-width: 640PX;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    height: 150px;
+    box-sizing: border-box;
+    .icon-item {
+      width: 140px;
+      color: #fff;
+      position: absolute;
+      &.renwu {
+        top: 34px;
+        left: 0;
+        a {
+          display: block;
+          color: #fff;
+          float: right;
+        }
+      }
+      &.cart {
+        top: 34px;
+        right: 0;
+        a {
+          display: block;
+          color: #fff;
+          float: left;
+        }
+      }
+      .icon {
+        &.icon-renwu {
+          display: inline-block;
+          width: 80px;
+          height: 86px;
+          background: url(img/renwu-1.png) no-repeat;
+          background-size: auto 86px;
+          background-position: center center;
+        }
+        &.icon-gouwuche {
+          display: inline-block;
+          width: 90px;
+          height: 86px;
+          background: url(img/gouwuche-1.png) no-repeat;
+          background-size: auto 86px;
+          background-position: center center;
+        }
+      }
+    }
+  }
+  .banner {
+    width: 100%;
+    height: 460px;
+    background: #fff;
+    img {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .swiper-pagination{
+      padding-left: 40px;
+      box-sizing: border-box;
+    }
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 20px;
+      margin: 0 10px;
+    }
+    .swiper-pagination-bullet-active{
+          background: #fff;
+    }
+  }
+  
+}

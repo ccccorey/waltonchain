@@ -1,0 +1,32 @@
+{
+  "name": "test",
+  "version": "1.1.1",
+  "description": "*",
+  "main": " ",
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "h": "gulp help"
+  },
+  "devDependencies": {
+    "autoprefixer": "*",
+    "css-mqpacker": "*",
+    "cssnano": "*",
+    "express": "*",
+    "gulp": "*",
+    "gulp-base64": "^0.1.3",
+    "gulp-cssurl": "*",
+    "gulp-less": "^3.3.0",
+    "gulp-postcss": "*",
+    "postcss-pxtorem": "*"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "gulp-less": "^3.3.0"
+  },
+  "keywords": [
+    "rebate"
+  ],
+  "author": "admin",
+  "license": "ISC"
+}

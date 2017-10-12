@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+//------------------------------------
+// sprite icon
+// .sprite-icon{
+// 	display: inline-block;
+// 	&:after{
+// 		content: "";
+// 		width: 40.5px;
+// 	  height: 40.5px;
+// 	  display: inline-block;
+// 	  text-indent: -9999px;
+// 	  overflow: hidden;
+// 		vertical-align: middle;
+// 	}
+// }
+
+//------------------------------------
+// direction icon
+
+@mixin icon-direction($dir, $size: 6.75px, $color: #666){
+	@if $dir == top{
+		border-left: $size solid $color;
+		border-top: $size solid $color;
+	}@else if $dir == right{
+		border-right: $size solid $color;
+		border-top: $size solid $color;
+	}@else if $dir == left{
+	  border-left: $size solid $color;
+		border-bottom: $size solid $color;
+	}@else if $dir == bottom{
+		 border-right: $size solid $color;
+		border-bottom: $size solid $color;
+	}
+
+}
+
+.dir-icon{
+	display: inline-block;
+	&:after{
+		content: "";
+		width: 27px;
+	  height: 27px;
+	  display: inline-block;
+	  transform: rotate(45deg);
+	  text-indent: -9999px;
+	  overflow: hidden;
+		vertical-align: middle;
+		margin-top: -6.75px;
+	}
+
+	&.top-dir-icon:after{
+		@include icon-direction("top",6.75px, #d8d8d8);
+	}
+	&.right-dir-icon:after{
+		@include icon-direction("right",6.75px, #d8d8d8);
+	}
+	&.bottom-dir-icon:after{
+		@include icon-direction("bottom",6.75px, #d8d8d8);
+	}
+	// &.left-dir-icon:after{
+	// 	@include icon-direction("left",6.75px, #d8d8d8);
+	// }
+	@at-root{
+		.dir-icon.dir-color-inherit:after{ border-color: inherit; }
+	}
+
+}

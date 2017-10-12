@@ -1,0 +1,403 @@
+.icon {
+  display: inline-block;
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: middle;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html {
+  height: 100%;
+  font-family: "Microsoft YaHei", "Helvetica", "Helvetica Neue";
+  color: #444;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background: #efefef;
+}
+
+body {
+  min-height: 100%;
+  max-width: 640PX;
+  margin: 0 auto;
+  font-size: .14rem;
+  background: #efefef;
+  color: #333;
+  padding:140px 0;
+  box-sizing: border-box;
+}
+
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: '';
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+/* 去除点击默认阴影 */
+a,img,button,input,textarea{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+input,textarea,select{
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border: none;
+}
+
+.header-title {
+  height: 140px;
+  background: #f5f5f5;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  z-index: 100;
+  width: 100%;
+  max-width: 640PX;
+  h2 {
+    text-align: center;
+    font-size: 46px;
+    font-weight: bold;
+    line-height: 140px;
+  }
+  .back {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-left: .02rem solid #666;
+    border-bottom: .02rem solid #666;
+    width: .12rem;
+    height: .12rem;
+    display: inline-block;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    margin: .14rem .15rem;
+    text-indent: -9999px;
+  }
+  .refresh {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    background: url(img/refresh.png) no-repeat;
+    background-size: 56px 56px;
+    background-position: center center;
+  }
+
+  .share {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    background: url(img/share.png) no-repeat;
+    background-size: 60px 60px;
+    background-position: center center;
+  }
+
+  .home-search {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    background: url(img/home-search.png) no-repeat;
+    background-size: 60px auto;
+    background-position: center center;
+  }
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  background-color: #fafafa;
+  border: 1PX solid #ccc;
+  z-index: 100;
+  width: 100%;
+  max-width: 640PX;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  height: 140px;
+  box-sizing: border-box;
+  padding-top: 20px;
+  ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -o-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  li {
+    moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    -o-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+    color: #333;
+    font-size: 30px;
+    &.on{
+      i{
+        color: #569fcf;
+      }
+      p{
+        color: #569fcf;
+      }
+    }
+    &:hover{
+      i{
+        color: #569fcf;
+      }
+      p{
+        color: #569fcf;
+      }
+    }
+    a {
+      display: block;
+      color: #a2a2a2;
+    }
+    i{
+      font-size: 56px;
+    }
+    p {
+      margin-top: 10px;
+    }
+  }
+}
+
+.popup-mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .3);
+  z-index: 99;
+}
+
+.popup-box {
+  padding: 40px 70px;
+  width: 880px;
+  height: 680px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+/* loading */
+.loading{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(../images/loading.gif) no-repeat;
+  background-size: 120px auto;
+  background-position: center;
+  background-color: rgba(0,0,0,.5);
+  z-index: 999;
+}
+
+/* 提示信息 */
+.prompt-popup {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    color: #FFF;
+    background-color: rgba(0,0,0,0.8);
+    padding: .05rem .10rem;
+    border-radius: .05rem;
+    text-align: center;
+    max-width: 90%;
+    min-width: 40%;
+    display: none;
+}
+
+
+/* 向右箭头 */
+.arrow-right {
+    border-left: 5px solid #666;
+    border-bottom: 5px solid #666;
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    transform: rotate(225deg);
+    text-indent: -9999px;
+  }
+
+  /* 按钮1 */
+  .btn-1{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    height: 130px;
+    line-height: 130px;
+    color: #fff;
+    text-align: center;
+    font-size: 42px;
+    background: #0bb9ee;
+    border-radius: 8px;
+    cursor: pointer;
+    &.green{
+      background: #44b54b;
+    }
+    &.disabled{
+      background: #ccc;
+    }
+    
+  }
+  .btnWrap{
+        padding: 0 50px;
+        margin: 0 auto;
+    }
+
+  /* 同意条款 */
+  .chk-line{
+            padding: 40px 60px;
+            font-size: 36px;
+            color: #666;
+            height: 42px;
+            line-height: 42px;
+            .chk{
+                position: relative;
+                margin-right: 4px;
+                display: inline-block;
+                line-height:42px;
+                vertical-align: middle;
+                margin-top: -8px;
+                
+                input[type="checkbox"]{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                }
+                i{
+                    font-size: 36px;
+                    color: #aaa;
+                }
+            }
+            
+            span{
+                color: #3da4f1;
+                padding: 0 8px;
+            }
+        }
+
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {color: #aaa;}
+input:-moz-placeholder,textarea:-moz-placeholder {color:#aaa;}
+input::-moz-placeholder,textarea::-moz-placeholder {color:#aaa;}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {color:#aaa;}
+
+// --------------------------------
+// just for modal/popup
+// --------------------------------
+.normal-modal{
+  @z-index: 200;
+  .modal-box{
+    background-color: #fff;
+    min-width: 843.75px;
+    padding: 40.5px 50.625px;
+    border-radius: 16.875px;
+    position: absolute;
+    top: 337.5px;
+    left: 50%;
+    z-index: @z-index + 1;
+    transform: translate(-50%,0);
+  }
+  .modal-mask{
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @z-index;
+  }
+  .modal-title{
+    text-align: center;
+  }
+  .modal-action{
+    text-align: right;
+    margin-top: 40.5px;
+    .action-link{
+      display: inline-block;
+      color: #007fd7;
+      padding: 16.875px 67.5px;
+    }
+  }
+  &.confirm-modal{
+    .modal-box{
+      position: fixed;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+    .confirm-text{ margin: 67.5px 50.625px; }
+  }
+}
+
+/* input disabled样式 */
+input:disabled{
+  background: #fff;
+  outline: none;
+  border: none;
+}
+
+/* form页面失败提示 */
+.formError-tips{
+  padding: 40px 60px;
+  font-size: 36px;
+  color: #ff0000;
+  line-height: 1.5;
+
+}
+
+/* loadMore */
+.load-more{
+  color: #999;
+  text-align: center;
+  font-size: 42px;
+  padding: 20px 0;
+}

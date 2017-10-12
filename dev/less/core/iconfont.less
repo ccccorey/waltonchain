@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "i-jia-iconfont";
+  src: url('/dist/fonts/i-jia-iconfont.eot'); /* IE9*/
+  src: url('/dist/fonts/i-jia-iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('/dist/fonts/i-jia-iconfont.woff') format('woff'), /* chrome, firefox */ url('/dist/fonts/i-jia-iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('/dist/fonts/i-jia-iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.i-icon {
+  font-family: "i-jia-iconfont";
+  font-size: 54px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+
+  vertical-align: middle;
+
+  &[data-icon]:before {
+    content: attr(data-icon);
+  }
+
+}
